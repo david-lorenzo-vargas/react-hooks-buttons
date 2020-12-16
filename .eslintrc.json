@@ -1,16 +1,96 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": ["plugin:react/recommended", "airbnb"],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+    "env": {
+        "browser": true,
+        "es2021": true
     },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
-  "plugins": ["react"],
-  "rules": {}
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": 12,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react"
+    ],
+    "rules": {
+        "arrow-parens": 0,
+        "dot-notation": 0,
+        "class-methods-use-this": 0,
+        "operator-linebreak": 0,
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1
+            }
+        ],
+        "react/prop-types": 0,
+        "react/require-default-props": 0,
+        "react/no-danger": 0,
+        "linebreak-style": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "jsx-a11y/no-static-element-interactions": 0,
+        "padding-line-between-statements": [
+            "error",
+            {
+                "blankLine": "always",
+                "prev": "*",
+                "next": [
+                    "multiline-block-like",
+                    "multiline-expression",
+                    "block",
+                    "block-like",
+                    "cjs-export",
+                    "class",
+                    "export",
+                    "import"
+                ]
+            },
+            {
+                "blankLine": "always",
+                "prev": [
+                    "multiline-block-like",
+                    "multiline-expression",
+                    "block",
+                    "block-like",
+                    "cjs-export",
+                    "class",
+                    "export",
+                    "import"
+                ],
+                "next": "*"
+            },
+            {
+                "blankLine": "any",
+                "prev": [
+                    "export",
+                    "import"
+                ],
+                "next": [
+                    "export",
+                    "import"
+                ]
+            }
+        ]
+    },
+    "overrides": [
+        {
+          "files": [
+            "**/*.test.js",
+            "**/*.test.jsx"
+          ],
+          "env": {
+            "browser": true,
+            "es2021": true,
+            "jest": true
+          },
+          "rules": {
+            "react/jsx-props-no-spreading": 0
+          }
+        }
+      ]
 }

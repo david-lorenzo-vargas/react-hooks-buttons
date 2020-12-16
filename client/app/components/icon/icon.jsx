@@ -12,7 +12,7 @@ const Icon = (props) => {
 
   return (
     <div className={cx('icon', {
-      [`icon--size${size}`]: size,
+      [`icon--size-${size}`]: size,
     })}
     >
       <i dangerouslySetInnerHTML={{ __html: glyphs[icon] }} />

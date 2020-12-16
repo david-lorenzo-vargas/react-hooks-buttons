@@ -8,12 +8,15 @@
     "start": "webpack-dev-server --env.NODE_ENV=development --progress",
     "lint": "npm run lint-css && npm run lint-js",
     "lint-js": "npx eslint --ext .jsx --ext .js .",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
     "lint-css": "npx stylelint \"**/*.scss\""
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "classnames": "^2.2.6",
+    "prop-types": "^15.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   },
@@ -38,6 +41,10 @@
     "svg-inline-loader": "^0.8.2",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
-    "webpack-dev-server": "^3.11.0"
+    "webpack-dev-server": "^3.11.0",
+    "@storybook/addon-actions": "^6.0.26",
+    "@storybook/addon-essentials": "^6.0.26",
+    "@storybook/addon-links": "^6.0.26",
+    "@storybook/react": "^6.0.26"
   }
 }

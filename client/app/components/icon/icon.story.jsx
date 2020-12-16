@@ -35,7 +35,7 @@ export default {
     size: {
       name: 'size',
       type: { name: 'string' },
-      constrol: {
+      control: {
         type: 'select',
         options: ['small', 'medium'],
       },

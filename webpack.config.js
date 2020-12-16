@@ -37,7 +37,9 @@ module.exports = ({ NODE_ENV }) => ({
               sassOptions: {
                 indentWidth: 2,
                 outputStyle: 'expanded',
-                includePaths: [path.resolve(__dirname, 'client/app/styles')],
+                includePaths: [
+                  path.resolve(__dirname, 'client/app/styles'),
+                ],
               },
             },
           },
@@ -45,14 +47,15 @@ module.exports = ({ NODE_ENV }) => ({
       },
       {
         test: /\.(png|jpe?g|gif)$/i,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              outputPath: 'assets/images',
-            },
-          },
-        ],
+        loader: 'url-loader',
+        // use: [
+        //   {
+        //     loader: 'file-loader',
+        //     options: {
+        //       outputPath: 'assets/images',
+        //     },
+        //   },
+        // ],
       },
     ],
   },

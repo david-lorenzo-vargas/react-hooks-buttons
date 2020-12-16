@@ -1,0 +1,15 @@
+.grid-item {
+  align-items: center;
+  flex-basis: auto;
+  justify-content: center;
+
+  &--grow {
+    flex-grow: 1;
+    flex-shrink: 0;
+  }
+
+  &--shrink {
+    flex-grow: 0;
+    flex-shrink: 1;
+  }
+}

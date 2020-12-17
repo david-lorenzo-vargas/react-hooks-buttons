@@ -17,12 +17,15 @@ const Button = (props) => {
     onClick();
   };
 
+  const popingButtons = icon === 'profile' || icon === 'card' || icon === 'chart';
+
   return (
     <div
       onClick={handleButtonClick}
       className={cx('button', {
         [`button--size-${size}`]: size,
         'button--active': active,
+        'button--pop': popingButtons,
       })}
     >
       <div className={cx('button__item')} />

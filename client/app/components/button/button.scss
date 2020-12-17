@@ -56,4 +56,20 @@
     height: 90px;
     padding: 5px;
   }
+
+  &--pop {
+    animation: pop 500ms 1;
+
+    @keyframes pop {
+      from {
+        transform: scale(0);
+        opacity: 0;
+      }
+
+      to {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+  }
 }

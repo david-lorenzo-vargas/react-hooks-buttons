@@ -15,4 +15,9 @@
     transform: rotate(45deg);
     transition: all 300ms;
   }
+
+  &--back {
+    transform: rotate(0deg);
+    transition: all 300ms;
+  }
 }

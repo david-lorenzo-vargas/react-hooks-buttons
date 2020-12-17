@@ -26,7 +26,7 @@ const Button = (props) => {
       })}
     >
       <div className={cx('button__item')} />
-      <Icon icon={icon} size={size} />
+      <Icon icon={icon} size={size} active={active} />
     </div>
   );
 };

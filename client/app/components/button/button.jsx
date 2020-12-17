@@ -6,7 +6,12 @@ import styles from './button.scss';
 const cx = classnames.bind(styles);
 
 const Button = (props) => {
-  const { icon, size, onClick } = props;
+  const {
+    icon,
+    size,
+    onClick,
+    active,
+  } = props;
 
   const handleButtonClick = () => {
     onClick();
@@ -17,6 +22,7 @@ const Button = (props) => {
       onClick={handleButtonClick}
       className={cx('button', {
         [`button--size-${size}`]: size,
+        'button--active': active,
       })}
     >
       <Icon icon={icon} size={size} />

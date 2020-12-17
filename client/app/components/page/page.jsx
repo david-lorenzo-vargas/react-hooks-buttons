@@ -15,7 +15,9 @@ const Page = () => {
   return (
     <div className={styles.page}>
       <div className={styles['page__pop-buttons']}>
-        {state.active ? <PopButtons /> : null}
+        {state.active ?
+          <PopButtons active={state.active} />
+          : null}
       </div>
       <div className={styles['page__add-button']}>
         <Button

@@ -13,8 +13,8 @@ const Template = ({ icon, size, active }) => (
 export const Default = Template.bind({});
 
 Default.args = {
-  icon: 'add',
-  size: 'small',
+  icon: '',
+  size: '',
   active: '',
 };
 

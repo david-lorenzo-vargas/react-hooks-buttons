@@ -7,6 +7,21 @@
   box-shadow: 8px 8px 10px rgba(4, 57, 107, .3);
   cursor: pointer;
   position: relative;
+  animation: back 500ms 1;
+
+  @keyframes back {
+    from {
+      transform: scale(.95);
+    }
+
+    50% {
+      transform: scale(1.1);
+    }
+
+    to {
+      transform: scale(1);
+    }
+  }
 
   &--active {
     animation: push 500ms 1;

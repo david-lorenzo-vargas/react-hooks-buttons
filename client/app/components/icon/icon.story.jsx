@@ -6,10 +6,11 @@ import * as glyphs from './svg';
 
 const glyphsNames = Object.keys(glyphs);
 
-const Template = ({ icon, size }) => (
+const Template = ({ icon, size, active }) => (
   <Icon
     icon={icon}
     size={size}
+    active={active}
   />
 );
 
@@ -18,6 +19,7 @@ export const Default = Template.bind({});
 Default.args = {
   icon: glyphsNames[0],
   size: 'small',
+  active: '',
 };
 
 export default {
@@ -38,6 +40,14 @@ export default {
       control: {
         type: 'select',
         options: ['small', 'medium'],
+      },
+    },
+    active: {
+      name: 'active',
+      type: { name: 'string' },
+      control: {
+        type: 'select',
+        options: ['active', ''],
       },
     },
   },

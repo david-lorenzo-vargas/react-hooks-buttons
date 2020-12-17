@@ -1,8 +1,8 @@
 import React from 'react';
-import Button from './components/button';
+import Page from './components/page';
 
 const App = () => (
-  <Button />
+  <Page />
 );
 
 export default App;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import styles from './page.scss';
 import Button from '../button';
+import PopButtons from '../pop-buttons';
 
 const Page = () => {
   const [state, setState] = useState({ active: false });
@@ -13,12 +14,17 @@ const Page = () => {
 
   return (
     <div className={styles.page}>
-      <Button
-        onClick={handleButtonClick}
-        icon="add"
-        size="medium"
-        active={state.active}
-      />
+      <div className={styles['page__pop-buttons']}>
+        {state.active ? <PopButtons /> : null}
+      </div>
+      <div className={styles['page__add-button']}>
+        <Button
+          onClick={handleButtonClick}
+          icon="add"
+          size="medium"
+          active={state.active}
+        />
+      </div>
     </div>
   );
 };

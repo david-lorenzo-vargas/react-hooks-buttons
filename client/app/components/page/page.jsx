@@ -4,20 +4,19 @@ import Button from '../button';
 import PopButtons from '../pop-buttons';
 
 const Page = () => {
-  const [state, setState] = useState({ active: false });
+  const [state, setState] = useState({ active: false, previousActive: false });
 
   const handleButtonClick = () => {
     setState({
       active: !state.active,
+      previousActive: state.active,
     });
   };
 
   return (
     <div className={styles.page}>
       <div className={styles['page__pop-buttons']}>
-        {state.active ?
-          <PopButtons active={state.active} />
-          : null}
+        {state.active ? <PopButtons /> : null}
       </div>
       <div className={styles['page__add-button']}>
         <Button
@@ -25,6 +24,7 @@ const Page = () => {
           icon="add"
           size="medium"
           active={state.active}
+          previousActive={state.previousActive}
         />
       </div>
     </div>

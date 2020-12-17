@@ -10,4 +10,9 @@
   &--size-medium {
     width: 35px;
   }
+
+  &--active {
+    transform: rotate(45deg);
+    transition: all 300ms;
+  }
 }

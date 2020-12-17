@@ -6,4 +6,17 @@
   justify-content: center;
   align-items: center;
   background-color: rgb(218, 218, 218);
+  position: relative;
+
+  &__add-button {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__pop-buttons {
+    position: absolute;
+    top: 100px;
+  }
 }

@@ -8,11 +8,12 @@ import styles from './icon.scss';
 const cx = classnames.bind(styles);
 
 const Icon = (props) => {
-  const { icon, size } = props;
+  const { icon, size, active } = props;
 
   return (
     <div className={cx('icon', {
       [`icon--size-${size}`]: size,
+      'icon--active': active,
     })}
     >
       <i dangerouslySetInnerHTML={{ __html: glyphs[icon] }} />

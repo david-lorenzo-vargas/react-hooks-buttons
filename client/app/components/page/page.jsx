@@ -13,7 +13,12 @@ const Page = () => {
 
   return (
     <div className={styles.page}>
-      <Button onClick={handleButtonClick} icon="add" size="medium" active={state.active} />
+      <Button
+        onClick={handleButtonClick}
+        icon="add"
+        size="medium"
+        active={state.active}
+      />
     </div>
   );
 };

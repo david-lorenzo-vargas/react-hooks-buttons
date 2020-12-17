@@ -25,6 +25,7 @@ const Button = (props) => {
         'button--active': active,
       })}
     >
+      <div className={cx('button__item')} />
       <Icon icon={icon} size={size} />
     </div>
   );

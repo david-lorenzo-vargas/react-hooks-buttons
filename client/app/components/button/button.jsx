@@ -11,6 +11,7 @@ const Button = (props) => {
     size,
     onClick,
     active,
+    previousActive,
   } = props;
 
   const handleButtonClick = () => {
@@ -29,7 +30,12 @@ const Button = (props) => {
       })}
     >
       <div className={cx('button__item')} />
-      <Icon icon={icon} size={size} active={active} />
+      <Icon
+        icon={icon}
+        size={size}
+        active={active}
+        previousActive={previousActive}
+      />
     </div>
   );
 };
